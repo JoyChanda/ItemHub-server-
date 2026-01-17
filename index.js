@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
   res.send('ItemHub API is running...');
 });
 
+app.get('/api', (req, res) => {
+  res.send('ItemHub API Endpoints: /api/items');
+});
+
 // API Routes
 app.get('/api/items', (req, res) => {
   res.json(items);
