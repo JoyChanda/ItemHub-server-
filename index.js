@@ -8,6 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('ItemHub API is running...');
+});
+
 // API Routes
 app.get('/api/items', (req, res) => {
   res.json(items);
